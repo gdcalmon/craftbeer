@@ -12,6 +12,9 @@ public class BeerResponse {
 	private String alcoholContent;
 	private String category;
 	
+	public BeerResponse() {
+	}
+	
 	public BeerResponse(Beer beer) {
 		this.alcoholContent = beer.getAlcoholContent();
 		this.category = beer.getCategory();

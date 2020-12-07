@@ -1,9 +1,9 @@
 CREATE TABLE IF NOT EXISTS beer (
 	id INT NOT NULL AUTO_INCREMENT,
-	name VARCHAR(256) NOT NULL,
-	ingredients TEXT NOT NULL,
-	alcohol_content VARCHAR(32) NOT NULL,
-	price DECIMAL(10,2) NOT NULL,
-	category VARCHAR(256) NOT NULL,
+	name VARCHAR(256) NULL,
+	ingredients TEXT NULL,
+	alcohol_content VARCHAR(32) NULL,
+	price DECIMAL(10,2) NULL,
+	category VARCHAR(256) NULL,
 	PRIMARY KEY (id)
 );

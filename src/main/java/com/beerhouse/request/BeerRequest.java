@@ -2,23 +2,12 @@ package com.beerhouse.request;
 
 import java.math.BigDecimal;
 
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 public class BeerRequest {
-	@NotNull
-	@Size(max=256)
 	private String name;
-	@NotNull
-	@Size(max=65535)
 	private String ingredients;
-	@NotNull
 	private BigDecimal price;
-	@NotNull
-	@Size(max=32)
 	private String alcoholContent;
-	@NotNull
-	@Size(max=256)
 	private String category;
 	
 	public String getName() {
@@ -36,4 +25,20 @@ public class BeerRequest {
 	public String getCategory() {
 		return category;
 	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setIngredients(String ingredients) {
+		this.ingredients = ingredients;
+	}
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
+	public void setAlcoholContent(String alcoholContent) {
+		this.alcoholContent = alcoholContent;
+	}
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	
 }

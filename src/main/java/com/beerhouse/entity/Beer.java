@@ -9,25 +9,21 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.Type;
-
-import com.beerhouse.request.BeerRequest;
 @Entity
 @Table(name = "beer")
 public class Beer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	@Column
+	@Column(nullable = true, name="name")
 	private String name;
-	@Column
-	@Type(type="text")
+	@Column(nullable = true, name="ingredients")
 	private String ingredients;
-	@Column
+	@Column(nullable = true, name="price")
 	private BigDecimal price;
-	@Column(name="alcohol_content")
+	@Column(nullable = true, name="alcohol_content")
 	private String alcoholContent;
-	@Column
+	@Column(nullable = true, name="category")
 	private String category;
 
 	public Beer() {
